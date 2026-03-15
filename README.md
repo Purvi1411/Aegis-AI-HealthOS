@@ -6,7 +6,7 @@ Aegis-AI acts as a personal medical command center, merging real-time biometric 
 
 ## 🚀 Core Features
 
-* 🧠 **Multimodal Diagnostic Agent:** Powered by Google Gemini 1.5 Flash, the AI analyzes both text queries and uploaded images (e.g., visual symptoms, medical scans) to provide preliminary insights.
+* 🧠 **Multimodal Diagnostic Agent:** Powered by Groq, the AI analyzes both text queries and uploaded images (e.g., visual symptoms, medical scans) to provide preliminary insights.
 * 🚨 **Sentinel Protocol (Anomaly Detection):** A dynamic backend engine monitors user-inputted biometrics (sleep, hydration, activity) and visually alerts the user to critical health intersections (e.g., severe dehydration + high kinetic output).
 * 🎙️ **Multilingual Neural Link:** Integrated Web Speech API and Web Audio API for hands-free voice querying and synthetic text-to-speech responses in multiple localized languages.
 * 📱 **Progressive Web App (PWA):** Fully installable as a standalone desktop or mobile application for a native software experience without the browser UI.
