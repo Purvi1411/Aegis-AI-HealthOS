@@ -13,7 +13,7 @@ import Login from './Login'
 import Signup from './Signup'
 import { useTheme } from './ThemeContext'
 
-const API_URL = "http://127.0.0.1:8000"
+const API_URL = "https://aegis-ai-healthos-3.onrender.com"
 
 const indianLanguages = [
   "English",

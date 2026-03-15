@@ -4,7 +4,7 @@ import { Activity, Timer, ChevronLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ProtocolAnalytics = ({ user, apiUrl, onBack, isDark }) => {
-    const BASE_URL = apiUrl || "http://127.0.0.1:8000";
+    const BASE_URL = apiUrl || "https://aegis-ai-healthos-3.onrender.com";
     const [timerHistory, setTimerHistory] = useState([]);
     const [timerStats, setTimerStats] = useState([]);
     const [loading, setLoading] = useState(true);

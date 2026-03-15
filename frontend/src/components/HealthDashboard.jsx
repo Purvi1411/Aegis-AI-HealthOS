@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const HealthDashboard = ({ user, apiUrl }) => {
     // Determine the base URL for API calls
-    const BASE_URL = apiUrl || "http://127.0.0.1:8000";
+    const BASE_URL = apiUrl || "https://aegis-ai-healthos-3.onrender.com";
 
     // 1. Metrics & Data State
     const [metrics, setMetrics] = useState({

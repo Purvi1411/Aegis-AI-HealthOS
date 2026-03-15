@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, MessageSquare, ShieldAlert } from 'lucide-react';
 import { useTheme } from '../ThemeContext';
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://aegis-ai-healthos-3.onrender.com";
 
 export default function ChatHistory({ onBack, user }) {
   const [history, setHistory] = useState([]);
