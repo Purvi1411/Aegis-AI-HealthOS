@@ -8,3 +8,9 @@ google-generativeai
 python-dotenv
 python-multipart
 PyPDF2
+langchain
+langchain-core
+langchain-community
+langchain-groq
+tavily-python
+langgraph
