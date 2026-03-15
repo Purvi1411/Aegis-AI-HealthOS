@@ -29,7 +29,7 @@ Aegis-AI acts as a personal medical command center, merging real-time biometric 
 * bcrypt (Authentication)
 
 **Artificial Intelligence**
-* Google Generative AI (Gemini 1.5 Flash Multimodal)
+* Groq Generative AI
 
 ---
 
