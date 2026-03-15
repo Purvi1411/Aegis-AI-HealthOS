@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pymongo
+bcrypt
+pydantic
+geopy
+google-generativeai
+python-dotenv
+python-multipart
+PyPDF2

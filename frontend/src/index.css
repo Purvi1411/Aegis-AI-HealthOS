@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* =========================================
+   THEME VARIABLES
+   ========================================= */
+
+:root[data-theme="dark"] {
+  --form-bg: #0f1117;
+  --form-bg2: #0a0d14;
+  --form-text: #e2e8f0;
+  --form-sub: #94a3b8;
+  --input-bg: #1e2433;
+  --input-border: #2d3748;
+  --input-focus-border: #6366f1;
+  --input-focus-ring: rgba(99, 102, 241, 0.15);
+  --input-text: #e2e8f0;
+  --placeholder: #4a5568;
+  --label-color: #94a3b8;
+  --link-color: #818cf8;
+  --link-hover: #a5b4fc;
+  --icon-bg: rgba(99, 102, 241, 0.12);
+  --icon-border: rgba(99, 102, 241, 0.25);
+  --card-bg: rgba(255,255,255,0.03);
+  --card-border: rgba(255,255,255,0.07);
+  --toggle-bg: #1e2433;
+  --toggle-border: #374151;
+  --msg-success-bg: rgba(16, 185, 129, 0.1);
+  --msg-success-text: #6ee7b7;
+  --msg-success-border: rgba(16, 185, 129, 0.25);
+  --msg-error-bg: rgba(239, 68, 68, 0.1);
+  --msg-error-text: #fca5a5;
+  --msg-error-border: rgba(239, 68, 68, 0.25);
+  --msg-warn-bg: rgba(245, 158, 11, 0.1);
+  --msg-warn-text: #fcd34d;
+  --msg-warn-border: rgba(245, 158, 11, 0.25);
+}
+
+:root[data-theme="light"] {
+  --form-bg: #f8faff;
+  --form-bg2: #eef2ff;
+  --form-text: #1e293b;
+  --form-sub: #64748b;
+  --input-bg: #ffffff;
+  --input-border: #e2e8f0;
+  --input-focus-border: #6366f1;
+  --input-focus-ring: rgba(99, 102, 241, 0.12);
+  --input-text: #1e293b;
+  --placeholder: #94a3b8;
+  --label-color: #64748b;
+  --link-color: #4f46e5;
+  --link-hover: #3730a3;
+  --icon-bg: rgba(99, 102, 241, 0.08);
+  --icon-border: rgba(99, 102, 241, 0.2);
+  --card-bg: rgba(255,255,255,0.8);
+  --card-border: rgba(203,213,225,0.6);
+  --toggle-bg: #f1f5f9;
+  --toggle-border: #cbd5e1;
+  --msg-success-bg: #f0fdf4;
+  --msg-success-text: #166534;
+  --msg-success-border: #bbf7d0;
+  --msg-error-bg: #fef2f2;
+  --msg-error-text: #991b1b;
+  --msg-error-border: #fecaca;
+  --msg-warn-bg: #fffbeb;
+  --msg-warn-text: #92400e;
+  --msg-warn-border: #fde68a;
+}
+
+/* =========================================
+   KEYFRAMES
+   ========================================= */
+
+@layer utilities {
+  @keyframes shine {
+    0% { translate: -150%; }
+    20%, 100% { translate: 150%; }
+  }
+
+  @keyframes pulse-ring {
+    0%   { transform: scale(0.85); opacity: 0.7; }
+    70%  { transform: scale(1.6);  opacity: 0; }
+    100% { transform: scale(1.6);  opacity: 0; }
+  }
+
+  @keyframes float-particle {
+    0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+    33%       { transform: translateY(-18px) translateX(8px);  opacity: 0.9; }
+    66%       { transform: translateY(10px)  translateX(-6px); opacity: 0.5; }
+  }
+
+  @keyframes drift-x {
+    0%, 100% { transform: translateX(0px);  opacity: 0.3; }
+    50%       { transform: translateX(30px); opacity: 0.8; }
+  }
+
+  @keyframes drift-diag {
+    0%, 100% { transform: translate(0, 0);       opacity: 0.5; }
+    50%       { transform: translate(-20px, 20px); opacity: 1; }
+  }
+}
