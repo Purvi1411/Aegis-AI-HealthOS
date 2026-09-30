@@ -85,6 +85,8 @@ def detect_anomalies(metrics: HealthMetrics):
         
     return anomalies
 
+@app.post("/api/wellness")
+@app.post("/wellness-index")
 @app.post("/health-score")
 async def get_health_score(metrics: HealthMetrics):
     # Get the normal pie/bar chart data
@@ -164,6 +166,7 @@ def get_chat_history(user_id: str, limit: int = 50):
         return {"status": "error", "message": str(e)}
 
 # --- GAMIFIED DIRECTIVES ---
+@app.get("/api/directives/{user_id}")
 @app.get("/directives/{user_id}")
 def get_directives(user_id: str):
     today_str = date.today().isoformat()
@@ -217,6 +220,8 @@ def reset_directives(user_id: str):
 import random
 
 # --- HISTORICAL TRENDS ---
+@app.get("/api/trends/{user_id}")
+@app.get("/api/health-trends/{user_id}")
 @app.get("/health-trends/{user_id}")
 def get_health_trends(user_id: str):
     """
@@ -369,4 +374,4 @@ def get_timer_stats(user_id: str):
         
         return {"status": "success", "stats": stats}
     except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e))

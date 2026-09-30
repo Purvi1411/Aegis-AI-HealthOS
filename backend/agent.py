@@ -1,6 +1,6 @@
 import os
 from langchain_groq import ChatGroq
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
@@ -11,14 +11,14 @@ GROQ_KEY = os.getenv("GROQ_API_KEY")
 TAVILY_KEY = os.getenv("TAVILY_API_KEY")
 
 # 4. Setup "Hands" (Search tools for verifying findings)
-tools = [TavilySearchResults(max_results=3, tavily_api_key=TAVILY_KEY)]
+tools = [TavilySearch(max_results=3, tavily_api_key=TAVILY_KEY)]
 
 # 5. Setup "Brain" (Multimodal Vision Model)
 try:
     model = ChatGroq(
         # Llama 3.2 Vision 11B is optimized for medical VQA and OCR
-        model="llama-3.3-70b-versatile", 
-        temperature=0,
+        model="openai/gpt-oss-120b", 
+        temperature=0.7,
         groq_api_key=GROQ_KEY
     )
 except Exception as e:
